@@ -1,8 +1,3 @@
-// Initialize Lucide Icons
-if (typeof lucide !== "undefined") {
-  lucide.createIcons();
-}
-
 // Sticky Navbar Scroll Effect
 const nav = document.getElementById("navbar");
 if (nav) {
@@ -46,6 +41,31 @@ closeDesktop.addEventListener("click", () => {
   desktopMenu.classList.remove("opacity-100");
   desktopMenu.classList.add("translate-x-full");
   setTimeout(() => desktopMenu.classList.add("hidden"), 300);
+});
+
+// Close menu when clicking outside or on the nav
+const closeMenu = (event) => {
+  if (mobileMenu && !mobileMenu.contains(event.target) && !menuBtn.contains(event.target)) {
+    mobileMenu.classList.remove("opacity-100");
+    setTimeout(() => mobileMenu.classList.add("hidden"), 300);
+  }
+
+  if (desktopMenu && !desktopMenu.contains(event.target) && !menuBtn.contains(event.target)) {
+    desktopMenu.classList.remove("opacity-100");
+    desktopMenu.classList.add("translate-x-full");
+    setTimeout(() => desktopMenu.classList.add("hidden"), 300);
+  }
+};
+
+document.addEventListener("click", closeMenu);
+
+// Close mobile menu when clicking a nav link
+const mobileNavLinks = mobileMenu.querySelectorAll("a");
+mobileNavLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    mobileMenu.classList.remove("opacity-100");
+    setTimeout(() => mobileMenu.classList.add("hidden"), 300);
+  });
 });
 
 // Lightbox Functionality
