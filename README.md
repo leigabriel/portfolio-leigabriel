@@ -20,7 +20,6 @@ You can use the **Fira Code Mono** font [here](https://github.com/tonsky/FiraCod
 - ![Facebook](https://img.shields.io/badge/Facebook-1877F2?style=flat-square&logo=facebook&logoColor=ffffff) [](https://www.facebook.com/malibiranlei)  
 - ![Instagram](https://img.shields.io/badge/Instagram-E4405F?style=flat-square&logo=instagram&logoColor=ffffff) [](https://www.instagram.com/leigxbriel)  
 
-
 ---
 
 © 2025 Lei Gabriel. All rights reserved.
