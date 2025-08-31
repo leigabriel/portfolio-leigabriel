@@ -17,10 +17,9 @@ You can use the **Fira Code Mono** font [here](https://github.com/tonsky/FiraCod
 
 ## Social Media
 
-- ![Facebook](https://img.shields.io/badge/Facebook-1877F2?style=flat-square&logo=facebook&logoColor=ffffff) [Facebook](https://www.facebook.com/)  
-- ![Instagram](https://img.shields.io/badge/Instagram-E4405F?style=flat-square&logo=instagram&logoColor=ffffff) [Instagram](https://www.instagram.com/)  
-- ![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=ffffff) [GitHub](https://github.com/leigabriel)  
-- ![Discord](https://img.shields.io/badge/Discord-5865F2?style=flat-square&logo=discord&logoColor=ffffff) [Discord](https://discord.com/)  
+- ![Facebook](https://img.shields.io/badge/Facebook-1877F2?style=flat-square&logo=facebook&logoColor=ffffff) [](https://www.facebook.com/malibiranlei)  
+- ![Instagram](https://img.shields.io/badge/Instagram-E4405F?style=flat-square&logo=instagram&logoColor=ffffff) [](https://www.instagram.com/leigxbriel)  
+
 
 ---
 
