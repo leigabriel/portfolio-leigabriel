@@ -4,7 +4,7 @@ This is my personal portfolio built with a modern, minimalist, and responsive de
 
 ---
 
-## Technologies Used
+## Tech Used
 
 - HTML
 - CSS
