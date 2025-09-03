@@ -14,20 +14,6 @@ The project focuses on clean visuals, functional design, and a terminal-inspired
 
 ---
 
-## 📂 Project Structure
-
-project-root
-├── src
-│ ├── assets
-│ │ ├── style.css
-│ │ └── script.js
-│ └── img
-│ └── # Project images
-├── index.html # Main entry file
-└── README.md
-
----
-
 ## 🌐 Connect with Me
 
 - Facebook → [facebook.com/malibiranlei](https://www.facebook.com/malibiranlei)  
