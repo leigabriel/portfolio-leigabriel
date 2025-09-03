@@ -1,11 +1,11 @@
-# 🌐 Lei Gabriel — Personal Portfolio
+# Lei Gabriel — Personal Portfolio
 
 A modern, minimalist, and responsive portfolio showcasing my work as a **Graphic Designer, UI Designer, and Frontend Developer**.  
 The project focuses on clean visuals, functional design, and a terminal-inspired aesthetic.
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - HTML  
 - CSS  
@@ -14,7 +14,7 @@ The project focuses on clean visuals, functional design, and a terminal-inspired
 
 ---
 
-## 🌐 Connect with Me
+## Connect with Me
 
 - Facebook → [facebook.com/malibiranlei](https://www.facebook.com/malibiranlei)  
 - Instagram → [instagram.com/leigxbriel](https://www.instagram.com/leigxbriel)  
@@ -23,7 +23,7 @@ The project focuses on clean visuals, functional design, and a terminal-inspired
 
 ---
 
-## 🎨 Design Notes
+## Design Notes
 
 - Primary font: **[Fira Code Mono](https://github.com/tonsky/FiraCode)**  
 - Inspired by minimalist  
@@ -31,6 +31,6 @@ The project focuses on clean visuals, functional design, and a terminal-inspired
 
 ---
 
-## 📜 License
+## License
 
 © 2025 Lei Gabriel. All rights reserved.  
