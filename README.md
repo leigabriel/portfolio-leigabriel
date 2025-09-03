@@ -1,29 +1,50 @@
-# Lei Gabriel Portfolio
+# 🌐 Lei Gabriel — Personal Portfolio
 
-This is my personal portfolio built with a modern, minimalist, and responsive design.
-
----
-
-## Tech Used
-
-- HTML
-- CSS
-- Tailwind CSS
-- JavaScript
+A modern, minimalist, and responsive portfolio showcasing my work as a **Graphic Designer, UI Designer, and Frontend Developer**.  
+The project focuses on clean visuals, functional design, and a terminal-inspired aesthetic.
 
 ---
 
-## Social Media
+## 🛠️ Tech Stack
 
-- Facebook: [https://www.facebook.com/malibiranlei](https://www.facebook.com/malibiranlei)
-- Instagram: [https://www.instagram.com/leigxbriel](https://www.instagram.com/leigxbriel)
-- TikTok: [https://www.tiktok.com/@leigabriel](https://www.tiktok.com/@lei.js)
-- Pinterest: [https://www.pinterest.com/leigabriel](https://www.pinterest.com/leigabriel)
-
----
-
-You can use the **Fira Code Mono** font: [https://github.com/tonsky/FiraCode](https://github.com/tonsky/FiraCode).
+- HTML  
+- CSS  
+- Tailwind CSS  
+- JavaScript  
 
 ---
 
-© 2025 Lei Gabriel. All rights reserved.
+## 📂 Project Structure
+
+project-root
+├── src
+│ ├── assets
+│ │ ├── style.css
+│ │ └── script.js
+│ └── img
+│ └── # Project images
+├── index.html # Main entry file
+└── README.md
+
+---
+
+## 🌐 Connect with Me
+
+- Facebook → [facebook.com/malibiranlei](https://www.facebook.com/malibiranlei)  
+- Instagram → [instagram.com/leigxbriel](https://www.instagram.com/leigxbriel)  
+- TikTok → [tiktok.com/@lei.js](https://www.tiktok.com/@lei.js)  
+- Pinterest → [pinterest.com/leigabriel](https://www.pinterest.com/leigabriel)  
+
+---
+
+## 🎨 Design Notes
+
+- Primary font: **[Fira Code Mono](https://github.com/tonsky/FiraCode)**  
+- Inspired by minimalist  
+- Responsive and mobile-friendly.  
+
+---
+
+## 📜 License
+
+© 2025 Lei Gabriel. All rights reserved.  
