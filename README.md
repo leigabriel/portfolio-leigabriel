@@ -14,15 +14,6 @@ The project focuses on clean visuals, functional design, and a terminal-inspired
 
 ---
 
-## Connect with Me
-
-- Facebook → [facebook.com/malibiranlei](https://www.facebook.com/malibiranlei)  
-- Instagram → [instagram.com/leigxbriel](https://www.instagram.com/leigxbriel)  
-- TikTok → [tiktok.com/@lei.js](https://www.tiktok.com/@lei.js)  
-- Pinterest → [pinterest.com/leigabriel](https://www.pinterest.com/leigabriel)  
-
----
-
 ## Design Notes
 
 - Primary font: **[Fira Code Mono](https://github.com/tonsky/FiraCode)**  
