@@ -15,7 +15,7 @@ The project focuses on clean visuals, functional design, and a terminal-inspired
 ---
 
 - Primary font: **[Fira Code Mono](https://github.com/tonsky/FiraCode)**
-- 
+ 
 ---
 
 © 2025 Lei Gabriel. All rights reserved.  
