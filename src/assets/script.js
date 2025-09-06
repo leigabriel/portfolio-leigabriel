@@ -1,4 +1,4 @@
-// Sticky Navbar Scroll Effect
+// Make the navbar sticky when scrolling
 const nav = document.getElementById("navbar");
 if (nav) {
   window.addEventListener("scroll", () => {
@@ -6,22 +6,21 @@ if (nav) {
   });
 }
 
+// Handle menu button clicks for mobile and desktop
 const menuBtn = document.getElementById("menu-toggle");
-
 const mobileMenu = document.getElementById("overlay-menu-mobile");
 const closeMobile = document.getElementById("menu-close-mobile");
-
 const desktopMenu = document.getElementById("overlay-menu-desktop");
 const closeDesktop = document.getElementById("menu-close-desktop");
 
-// Open menu
+// Open the menu
 menuBtn.addEventListener("click", () => {
   if (window.innerWidth < 768) {
-    // Mobile
+    // Show mobile menu
     mobileMenu.classList.remove("hidden");
     setTimeout(() => mobileMenu.classList.add("opacity-100"), 10);
   } else {
-    // Desktop
+    // Show desktop menu
     desktopMenu.classList.remove("hidden");
     setTimeout(() => {
       desktopMenu.classList.add("opacity-100");
@@ -30,20 +29,20 @@ menuBtn.addEventListener("click", () => {
   }
 });
 
-// Close Mobile
+// Close the mobile menu
 closeMobile.addEventListener("click", () => {
   mobileMenu.classList.remove("opacity-100");
   setTimeout(() => mobileMenu.classList.add("hidden"), 300);
 });
 
-// Close Desktop
+// Close the desktop menu
 closeDesktop.addEventListener("click", () => {
   desktopMenu.classList.remove("opacity-100");
   desktopMenu.classList.add("translate-x-full");
   setTimeout(() => desktopMenu.classList.add("hidden"), 300);
 });
 
-// Close menu when clicking outside or on the nav
+// Close menus when clicking outside
 const closeMenu = (event) => {
   if (mobileMenu && !mobileMenu.contains(event.target) && !menuBtn.contains(event.target)) {
     mobileMenu.classList.remove("opacity-100");
@@ -59,7 +58,7 @@ const closeMenu = (event) => {
 
 document.addEventListener("click", closeMenu);
 
-// Close mobile menu when clicking a nav link
+// Close mobile menu when a link is clicked
 const mobileNavLinks = mobileMenu.querySelectorAll("a");
 mobileNavLinks.forEach((link) => {
   link.addEventListener("click", () => {
@@ -68,7 +67,7 @@ mobileNavLinks.forEach((link) => {
   });
 });
 
-// Lightbox Functionality
+// Lightbox for viewing images
 const galleryImages = document.querySelectorAll(".gallery img");
 const lightbox = document.getElementById("lightbox");
 const lightboxImg = document.getElementById("lightbox-img");
@@ -76,12 +75,14 @@ const lightboxImg = document.getElementById("lightbox-img");
 if (lightbox && lightboxImg) {
   galleryImages.forEach((img) => {
     img.addEventListener("click", () => {
+      // Show the lightbox with the clicked image
       lightbox.classList.remove("hidden");
       lightbox.classList.add("flex");
       lightboxImg.src = img.src;
     });
   });
 
+  // Close the lightbox
   lightbox.addEventListener("click", () => {
     lightbox.classList.add("hidden");
     lightbox.classList.remove("flex");
