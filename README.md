@@ -30,16 +30,11 @@ Welcome to my modern, minimalist portfolio, meticulously crafted to showcase my 
 
 ```
 portfolio-leigabriel/
-├── node_modules/
 ├── src/
 │   ├── assets/
 │   ├── img/
-│   ├── input.css
-│   └── output.css
 ├── README.md
 ├── index.html
-├── package-lock.json
-├── package.json
 ```
 
 ---
