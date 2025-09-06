@@ -683,11 +683,21 @@
   <script src="src/assets/script.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
-    AOS.init({
-      duration: 800,
-      once: false
+    function initAOS() {
+      AOS.init({
+        duration: 1000,
+        once: false,
+        disable: () => window.innerWidth < 768
+      });
+    }
+
+    initAOS();
+
+    window.addEventListener('resize', () => {
+      AOS.refresh();
     });
   </script>
+
 
 </body>
 
