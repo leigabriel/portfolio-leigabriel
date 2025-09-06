@@ -88,3 +88,10 @@ if (lightbox && lightboxImg) {
     lightbox.classList.remove("flex");
   });
 }
+
+  const toggleBtn = document.getElementById("social-toggle");
+  const popup = document.getElementById("social-popup");
+
+  toggleBtn.addEventListener("click", () => {
+    popup.classList.toggle("hidden");
+  });
