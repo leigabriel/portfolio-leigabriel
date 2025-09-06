@@ -8,6 +8,8 @@
   <link rel="icon" type="image/png" href="src/img/lei_i.png">
   <link rel="stylesheet" href="src/assets/style.css">
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="stylesheet" href="src/output.css">
+  <link rel="stylesheet" href="node_modules/aos/dist/aos.css">
 
 </head>
 
@@ -28,7 +30,7 @@
 
   <!-- Mobile Overlay Menu -->
   <div id="overlay-menu-mobile"
-    class="fixed inset-0 bg-[#212631]/50 backdrop-blur-2xl bg-opacity-95 hidden opacity-0 transition-opacity duration-300 z-[9999] overflow-hidden md:hidden">
+    class="fixed inset-0 bg-[#212631]/50 backdrop-blur-2xl bg-opacity-95 hidden opacity-0 transition-opacity duration-300 z-[9999] md:hidden">
     <div class="flex h-full">
       <div class="flex-1 flex flex-col justify-between relative p-12">
 
@@ -250,7 +252,7 @@
     class="min-h-screen flex flex-col justify-center items-center text-center px-4 sm:px-6 md:px-12 bg-white rounded-b-3xl text-black">
 
     <!-- Main Heading -->
-    <h1 class="font-extrabold uppercase leading-snug tracking-tight 
+    <h1 data-aos="fade-up" class="font-extrabold uppercase leading-snug tracking-tight 
            text-3xl sm:text-5xl md:text-6xl lg:text-7xl 
            max-w-2xl sm:max-w-3xl md:max-w-4xl lg:max-w-6xl">
       Hi, I'm Lei Gabriel. <br>
@@ -260,18 +262,20 @@
     </h1>
 
     <!-- Subtext -->
-    <p
+    <p data-aos="fade-up" data-aos-delay="200"
       class="mt-6 text-sm sm:text-base md:text-lg lg:text-xl max-w-md sm:max-w-lg md:max-w-2xl font-medium text-gray-700">
       I craft engaging digital experiences through clean code, thoughtful design, and creative visuals.
     </p>
 
     <!-- Call-to-Action Links -->
-    <div class="mt-8 flex flex-wrap justify-center gap-4">
-      <a href="#projects"
+    <div data-aos="fade-up" data-aos-delay="400" class="mt-8 flex flex-wrap justify-center gap-4">
+
+      <a data-aos="zoom-in" data-aos-delay="600" href="#projects"
         class="px-6 py-3 bg-black text-white rounded-full font-semibold text-sm sm:text-base hover:bg-gray-800 transition">
         View Projects
       </a>
-      <a href="#contact"
+
+      <a data-aos="zoom-in" data-aos-delay="800" href="#contact"
         class="px-6 py-3 border-2 border-black text-black rounded-full font-semibold text-sm sm:text-base hover:bg-gray-100 transition">
         Contact Me
       </a>
@@ -283,33 +287,35 @@
     <div class="max-w-7xl mx-auto space-y-12 sm:space-y-16 md:space-y-20 lg:space-y-24 relative z-10">
 
       <!-- TOP: Title + Image + Intro -->
-      <div class="grid grid-cols-1 md:grid-cols-[280px_1fr] lg:grid-cols-[320px_1fr] gap-8 md:gap-12 items-start">
+      <div data-aos="fade-up"
+        class="grid grid-cols-1 md:grid-cols-[280px_1fr] lg:grid-cols-[320px_1fr] gap-8 md:gap-12 items-start">
 
         <!-- LEFT: Heading + Portrait -->
-        <div class="space-y-4 sm:space-y-6 flex flex-col items-left md:items-start text-left md:text-left">
-          <h2 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-widest">
+        <div data-aos="fade-right"
+          class="space-y-4 sm:space-y-6 flex flex-col items-left md:items-start text-left md:text-left">
+          <h2 data-aos="zoom-in" class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-widest">
             About
           </h2>
-          <div
+          <div data-aos="flip-left"
             class="border border-white/40 rounded-lg overflow-hidden w-32 h-32 sm:w-44 sm:h-44 md:w-60 md:h-60 lg:w-72 lg:h-72">
             <img src="src/img/lei_img.jpg" alt="Lei Gabriel Portrait" class="w-full h-full object-cover" />
           </div>
         </div>
 
         <!-- RIGHT: Intro Text -->
-        <div
+        <div data-aos="fade-left"
           class="space-y-4 sm:space-y-6 text-sm sm:text-base md:text-lg text-gray-300 leading-relaxed mt-6 md:mt-20 lg:mt-28">
-          <p>
+          <p data-aos="fade-up" data-aos-delay="100">
             <strong class="block text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-white">
               Hello, I'm Lei Gabriel
             </strong>
           </p>
-          <p>
+          <p data-aos="fade-up" data-aos-delay="200">
             I’m a <strong>graphic designer</strong> and aspiring <strong>IT professional</strong> passionate about
             blending <span class="text-white">creativity</span> and <span class="text-white">technology</span>.
             My focus is on crafting clean, modern designs and building functional digital experiences.
           </p>
-          <p>
+          <p data-aos="fade-up" data-aos-delay="300">
             With skills in <strong>branding</strong>, <strong>illustration</strong>, and <strong>UI design</strong>,
             I bring ideas to life with bold visuals and thoughtful storytelling. At the same time, I explore
             <strong>web development</strong> to expand my versatility as a creative technologist.
@@ -318,28 +324,29 @@
       </div>
 
       <!-- MIDDLE: Education | Hobbies | Quote -->
-      <div
+      <div data-aos="fade-up"
         class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 md:gap-10 lg:gap-12 text-sm sm:text-base md:text-lg leading-relaxed">
 
         <!-- Banner Image -->
-        <div class="col-span-1 md:col-span-3 flex flex-col items-center justify-center">
+        <div data-aos="zoom-in" class="col-span-1 md:col-span-3 flex flex-col items-center justify-center">
           <img src="src/img/banner.png" alt="About Banner"
             class="w-full h-40 sm:h-52 md:h-64 lg:h-80 object-cover rounded-xl border-2 border-[#ebebeb]/20 shadow-lg mb-4" />
         </div>
 
         <!-- EDUCATION -->
-        <div class="border border-[#ebebeb]/20 p-5 sm:p-6 md:p-8 space-y-4 rounded-xl">
+        <div data-aos="fade-right" data-aos-delay="100"
+          class="border border-[#ebebeb]/20 p-5 sm:p-6 md:p-8 space-y-4 rounded-xl">
           <h3 class="text-xl sm:text-2xl md:text-3xl font-bold text-blue-400">Education</h3>
           <ul class="space-y-4 text-gray-400">
-            <li>
+            <li data-aos="fade-up" data-aos-delay="150">
               <p class="font-semibold text-white">Senior High School</p>
               <p>Bacungan National High School <br> (2022–2024)</p>
             </li>
-            <li>
+            <li data-aos="fade-up" data-aos-delay="250">
               <p class="font-semibold text-white">Junior High School</p>
               <p>Bacungan National High School <br> (2018–2022)</p>
             </li>
-            <li>
+            <li data-aos="fade-up" data-aos-delay="350">
               <p class="font-semibold text-white">Elementary</p>
               <p>Bacungan Elementary School <br> (2012–2018)</p>
             </li>
@@ -348,25 +355,27 @@
         </div>
 
         <!-- HOBBIES -->
-        <div class="border border-[#ebebeb]/20 p-5 sm:p-6 md:p-8 space-y-4 rounded-xl">
+        <div data-aos="fade-up" data-aos-delay="200"
+          class="border border-[#ebebeb]/20 p-5 sm:p-6 md:p-8 space-y-4 rounded-xl">
           <h3 class="text-xl sm:text-2xl md:text-3xl font-bold text-yellow-400">My Hobbies</h3>
           <ul class="list-disc list-inside space-y-2">
-            <li>Digital Drawing & Graphic Design</li>
-            <li>Watching Anime & Fan Art Sketching</li>
-            <li>UI/UX Exploration</li>
-            <li>Listening to Lo-Fi & Chill Beats</li>
-            <li>Reading about creativity & growth</li>
+            <li data-aos="fade-up" data-aos-delay="250">Digital Drawing & Graphic Design</li>
+            <li data-aos="fade-up" data-aos-delay="300">Watching Anime & Fan Art Sketching</li>
+            <li data-aos="fade-up" data-aos-delay="350">UI/UX Exploration</li>
+            <li data-aos="fade-up" data-aos-delay="400">Listening to Lo-Fi & Chill Beats</li>
+            <li data-aos="fade-up" data-aos-delay="450">Reading about creativity & growth</li>
           </ul>
           <p class="text-xs italic text-blue-400">✏️📺🎨🎧📖</p>
         </div>
 
         <!-- QUOTE -->
-        <div class="border border-[#ebebeb]/20 p-5 sm:p-6 md:p-8 space-y-4 text-white rounded-xl">
+        <div data-aos="fade-left" data-aos-delay="300"
+          class="border border-[#ebebeb]/20 p-5 sm:p-6 md:p-8 space-y-4 text-white rounded-xl">
           <h3 class="text-xl sm:text-2xl md:text-3xl font-bold text-green-400">Design is Personal</h3>
-          <p>
+          <p data-aos="fade-up" data-aos-delay="350">
             For me, creativity isn’t just a skill — it's a way of life. It's how I express, heal, and inspire.
           </p>
-          <p class="italic text-sm sm:text-base md:text-lg text-gray-400">
+          <p data-aos="fade-up" data-aos-delay="450" class="italic text-sm sm:text-base md:text-lg text-gray-400">
             “Every artist dips their brush in their own soul, and paints their own nature into their pictures.”<br />
             — Henry Ward Beecher
           </p>
@@ -374,39 +383,40 @@
       </div>
 
       <!-- BOTTOM: Skills -->
-      <div class="space-y-8 sm:space-y-10">
-        <div class="flex flex-col items-start">
+      <div data-aos="fade-up" class="space-y-8 sm:space-y-10">
+        <div data-aos="fade-up" data-aos-delay="100" class="flex flex-col items-start">
           <h3 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-widest">Skills</h3>
           <p class="mt-2 max-w-3xl text-sm sm:text-base md:text-lg text-gray-300">
             A mix of design, logic, and collaboration—these skills define my approach to digital creation.
           </p>
         </div>
 
-        <div
+        <div data-aos="zoom-in" data-aos-delay="200"
           class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-8 gap-4 sm:gap-6 justify-items-center">
+
           <!-- Skill Item Example -->
-          <div
+          <div data-aos="flip-up" data-aos-delay="250"
             class="flex flex-col items-center w-full rounded-2xl p-3 sm:p-4 shadow-md bg-gradient-to-br from-orange-400 to-yellow-300 hover:scale-105 transition-transform duration-300">
             <img src="https://cdn-icons-png.flaticon.com/128/174/174854.png" alt="HTML"
               class="h-10 sm:h-14 drop-shadow-md" />
             <p class="mt-2 text-xs sm:text-sm font-bold text-orange-900">HTML</p>
           </div>
 
-          <div
+          <div data-aos="flip-up" data-aos-delay="300"
             class="flex flex-col items-center w-full rounded-2xl p-3 sm:p-4 shadow-md bg-gradient-to-br from-blue-400 to-blue-600 hover:scale-105 transition-transform duration-300">
             <img src="https://cdn-icons-png.flaticon.com/128/732/732190.png" alt="CSS"
               class="h-10 sm:h-14 drop-shadow-md" />
             <p class="mt-2 text-xs sm:text-sm font-bold text-blue-900">CSS</p>
           </div>
 
-          <div
+          <div data-aos="flip-up" data-aos-delay="350"
             class="flex flex-col items-center w-full rounded-2xl p-3 sm:p-4 shadow-md bg-gradient-to-br from-yellow-300 to-yellow-500 hover:scale-105 transition-transform duration-300">
             <img src="https://cdn-icons-png.flaticon.com/128/5968/5968292.png" alt="JS"
               class="h-10 sm:h-14 drop-shadow-md" />
             <p class="mt-2 text-xs sm:text-sm font-bold text-yellow-900">JavaScript</p>
           </div>
 
-          <div
+          <div data-aos="flip-up" data-aos-delay="400"
             class="flex flex-col items-center w-full rounded-2xl p-3 sm:p-4 shadow-md bg-gradient-to-br from-cyan-400 to-blue-300 hover:scale-105 transition-transform duration-300">
             <img src="https://tailwindcss.com/_next/static/media/tailwindcss-mark.d52e9897.svg" alt="Tailwind"
               class="h-10 sm:h-14 drop-shadow-md" />
@@ -423,29 +433,32 @@
     <div class="max-w-7xl w-full mx-auto relative overflow-visible">
 
       <!-- Section Header -->
-      <div class="text-center md:text-left mb-10 sm:mb-12">
-        <h2
+      <div data-aos="fade-up" class="text-center md:text-left mb-10 sm:mb-12">
+        <h2 data-aos="zoom-in"
           class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold tracking-widest text-[#212631] uppercase">
           My Services
         </h2>
-        <p class="mt-3 text-sm sm:text-base md:text-lg text-gray-700 font-normal">
+        <p data-aos="fade-up" data-aos-delay="200"
+          class="mt-3 text-sm sm:text-base md:text-lg text-gray-700 font-normal">
           What I offer as a creative developer & designer
         </p>
       </div>
 
       <!-- Services Wrapper -->
-      <div class="gallery divide-y divide-gray-200">
+      <div data-aos="fade-up" data-aos-delay="300" class="gallery divide-y divide-gray-200">
 
         <!-- Service 1 -->
-        <div
+        <div data-aos="fade-right"
           class="group flex flex-col md:flex-row items-stretch md:items-center justify-between py-8 sm:py-10 px-3 sm:px-6 transition-colors duration-200 hover:bg-gray-100/40 relative cursor-pointer overflow-visible rounded-xl">
 
           <!-- Text -->
-          <div class="flex-1 z-10 text-center md:text-left">
-            <h3 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#212631] uppercase tracking-wider">
+          <div data-aos="fade-left" data-aos-delay="100" class="flex-1 z-10 text-center md:text-left">
+            <h3 data-aos="fade-up"
+              class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#212631] uppercase tracking-wider">
               Frontend / UI Design
             </h3>
-            <p class="mt-2 text-sm sm:text-base md:text-lg text-gray-700 font-medium">
+            <p data-aos="fade-up" data-aos-delay="200"
+              class="mt-2 text-sm sm:text-base md:text-lg text-gray-700 font-medium">
               Modern and responsive website & app interfaces
             </p>
           </div>
@@ -460,14 +473,16 @@
         </div>
 
         <!-- Service 2 -->
-        <div
+        <div data-aos="fade-right" data-aos-delay="200"
           class="group flex flex-col md:flex-row items-stretch md:items-center justify-between py-8 sm:py-10 px-3 sm:px-6 transition-colors duration-200 hover:bg-gray-100/40 relative cursor-pointer overflow-visible rounded-xl">
 
-          <div class="flex-1 z-10 text-center md:text-left">
-            <h3 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#212631] uppercase tracking-wider">
+          <div data-aos="fade-left" data-aos-delay="300" class="flex-1 z-10 text-center md:text-left">
+            <h3 data-aos="fade-up"
+              class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#212631] uppercase tracking-wider">
               Arts / Sketching
             </h3>
-            <p class="mt-2 text-sm sm:text-base md:text-lg text-gray-700 font-medium">
+            <p data-aos="fade-up" data-aos-delay="200"
+              class="mt-2 text-sm sm:text-base md:text-lg text-gray-700 font-medium">
               Hand-drawn and digital art concepts
             </p>
           </div>
@@ -480,14 +495,16 @@
         </div>
 
         <!-- Service 3 -->
-        <div
+        <div data-aos="fade-right" data-aos-delay="300"
           class="group flex flex-col md:flex-row items-stretch md:items-center justify-between py-8 sm:py-10 px-3 sm:px-6 transition-colors duration-200 hover:bg-gray-100/40 relative cursor-pointer overflow-visible rounded-xl">
 
-          <div class="flex-1 z-10 text-center md:text-left">
-            <h3 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#212631] uppercase tracking-wider">
+          <div data-aos="fade-left" data-aos-delay="400" class="flex-1 z-10 text-center md:text-left">
+            <h3 data-aos="fade-up"
+              class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#212631] uppercase tracking-wider">
               Graphic Designs
             </h3>
-            <p class="mt-2 text-sm sm:text-base md:text-lg text-gray-700 font-medium">
+            <p data-aos="fade-up" data-aos-delay="200"
+              class="mt-2 text-sm sm:text-base md:text-lg text-gray-700 font-medium">
               Branding, posters, and visual content
             </p>
           </div>
@@ -504,42 +521,45 @@
 
   <!-- Projects Section -->
   <section id="projects" class="min-h-screen py-16 sm:py-20 px-4 sm:px-6 md:px-10 bg-blue-950 text-white">
-    <div class="max-w-7xl mx-auto mt-16 sm:mt-24 grid md:grid-cols-2 gap-12 items-start">
+    <div data-aos="fade-up" class="max-w-7xl mx-auto mt-16 sm:mt-24 grid md:grid-cols-2 gap-12 items-start">
 
       <!-- Left Content -->
-      <div class="self-start text-center md:text-left flex flex-col items-center md:items-start gap-4">
-        <h2
+      <div data-aos="fade-right"
+        class="self-start text-center md:text-left flex flex-col items-center md:items-start gap-4">
+        <h2 data-aos="zoom-in"
           class="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-widest drop-shadow-lg mb-4 sm:mb-6">
           Projects
         </h2>
-        <p class="text-base sm:text-lg md:text-xl text-white/90 max-w-xl">
+        <p data-aos="fade-up" data-aos-delay="200" class="text-base sm:text-lg md:text-xl text-white/90 max-w-xl">
           Showcasing creativity and precision with a focus on usability and design.
         </p>
-        <p class="text-base sm:text-lg md:text-xl text-white/90">
+        <p data-aos="fade-up" data-aos-delay="400" class="text-base sm:text-lg md:text-xl text-white/90">
           Going to collaborate?
           <a href="#contact" class="text-indigo-300 hover:underline">Get in touch!</a>
         </p>
       </div>
 
       <!-- Right Content (Project Cards) -->
-      <div class="space-y-8">
+      <div data-aos="fade-left" class="space-y-8">
         <!-- Project Card -->
-        <div
+        <div data-aos="zoom-in" data-aos-delay="200"
           class="gallery bg-indigo-700 border-2 rounded-2xl border-white/20 shadow-xl hover:scale-[1.02] transition-transform overflow-hidden">
           <div class="flex flex-col sm:flex-row">
+
             <!-- Image -->
             <div class="gallery cursor-pointer sm:w-1/3 h-44 sm:h-auto">
               <img src="src/img/artgallery.png" alt="Art Gallery" class="w-full h-full object-cover">
             </div>
+
             <!-- Content -->
-            <div class="sm:w-2/3 p-6 flex flex-col justify-between">
+            <div data-aos="fade-up" data-aos-delay="400" class="sm:w-2/3 p-6 flex flex-col justify-between">
               <div>
-                <h3 class="text-xl sm:text-2xl font-bold italic">Art Gallery</h3>
-                <p class="text-sm sm:text-base text-white/80 mt-2">
+                <h3 data-aos="fade-up" class="text-xl sm:text-2xl font-bold italic">Art Gallery</h3>
+                <p data-aos="fade-up" data-aos-delay="200" class="text-sm sm:text-base text-white/80 mt-2">
                   Explore artworks from digital illustrations to concept designs.
                 </p>
               </div>
-              <div class="mt-4 flex flex-wrap gap-3">
+              <div data-aos="fade-up" data-aos-delay="400" class="mt-4 flex flex-wrap gap-3">
                 <a href="https://github.com/leigabriel/art-gallery" target="_blank"
                   class="px-4 py-2 bg-white text-indigo-700 font-semibold rounded-lg hover:bg-gray-200 transition-colors">
                   GitHub
@@ -560,15 +580,16 @@
   <!-- Contact Section -->
   <section id="contact" class="min-h-screen flex flex-col md:flex-row">
     <!-- Left: Info / Branding -->
-    <div class="w-full md:w-1/2 bg-gray-900 text-white flex flex-col items-center justify-center p-10">
+    <div data-aos="fade-right"
+      class="w-full md:w-1/2 bg-gray-900 text-white flex flex-col items-center justify-center p-10">
       <div class="max-w-md text-center md:text-left space-y-6">
         <!-- Logo -->
-        <div class="flex justify-center md:justify-start">
+        <div data-aos="zoom-in" class="flex justify-center md:justify-start">
           <img src="src/img/lei_img.jpg" alt="Lei Gabriel Logo"
             class="w-20 h-20 rounded-full object-cover shadow-lg border-2 border-white/30">
         </div>
-        <h2 class="text-3xl sm:text-4xl font-bold">Let’s Work Together</h2>
-        <p class="text-gray-300 leading-relaxed text-base sm:text-lg">
+        <h2 data-aos="fade-up" data-aos-delay="200" class="text-3xl sm:text-4xl font-bold">Let’s Work Together</h2>
+        <p data-aos="fade-up" data-aos-delay="400" class="text-gray-300 leading-relaxed text-base sm:text-lg">
           Have a project in mind, a collaboration idea, or just want to say hi?
           Drop me a message and I’ll get back to you as soon as possible.
         </p>
@@ -576,38 +597,39 @@
     </div>
 
     <!-- Right: Contact Form -->
-    <div class="w-full md:w-1/2 bg-blue-900 flex items-center justify-center p-8 sm:p-12">
-      <div class="w-full max-w-lg border border-white/20 bg-blue-950/40 rounded-2xl shadow-xl p-6 sm:p-8">
-        <h3 class="text-2xl font-semibold text-white mb-6 text-center">Get in Touch</h3>
+    <div data-aos="fade-left" class="w-full md:w-1/2 bg-blue-900 flex items-center justify-center p-8 sm:p-12">
+      <div data-aos="zoom-in"
+        class="w-full max-w-lg border border-white/20 bg-blue-950/40 rounded-2xl shadow-xl p-6 sm:p-8">
+        <h3 data-aos="fade-up" class="text-2xl font-semibold text-white mb-6 text-center">Get in Touch</h3>
 
         <form action="https://formspree.io/f/meozznwg" method="POST" class="space-y-5">
           <!-- Name -->
-          <div>
+          <div data-aos="fade-up" data-aos-delay="100">
             <label class="block mb-1 text-sm font-medium text-gray-300">Full Name</label>
             <input type="text" name="name" required placeholder="Your Name" class="w-full p-3 border border-gray-700 bg-gray-800 text-white rounded-lg 
-                   focus:ring-2 focus:ring-blue-500 focus:outline-none transition" />
+                 focus:ring-2 focus:ring-blue-500 focus:outline-none transition" />
           </div>
           <!-- Email -->
-          <div>
+          <div data-aos="fade-up" data-aos-delay="200">
             <label class="block mb-1 text-sm font-medium text-gray-300">Email</label>
             <input type="email" name="email" required placeholder="your@email.com" class="w-full p-3 border border-gray-700 bg-gray-800 text-white rounded-lg 
-                   focus:ring-2 focus:ring-blue-500 focus:outline-none transition" />
+                 focus:ring-2 focus:ring-blue-500 focus:outline-none transition" />
           </div>
           <!-- Subject -->
-          <div>
+          <div data-aos="fade-up" data-aos-delay="300">
             <label class="block mb-1 text-sm font-medium text-gray-300">Subject</label>
             <input type="text" name="subject" required placeholder="Ex. Collaboration" class="w-full p-3 border border-gray-700 bg-gray-800 text-white rounded-lg 
-                   focus:ring-2 focus:ring-blue-500 focus:outline-none transition" />
+                 focus:ring-2 focus:ring-blue-500 focus:outline-none transition" />
           </div>
           <!-- Message -->
-          <div>
+          <div data-aos="fade-up" data-aos-delay="400">
             <label class="block mb-1 text-sm font-medium text-gray-300">Message</label>
             <textarea name="message" rows="4" required placeholder="Type your message..." class="w-full p-3 border border-gray-700 bg-gray-800 text-white rounded-lg 
-                   focus:ring-2 focus:ring-blue-500 focus:outline-none transition"></textarea>
+                 focus:ring-2 focus:ring-blue-500 focus:outline-none transition"></textarea>
           </div>
           <!-- Submit Button -->
-          <button type="submit" class="w-full bg-blue-600 text-white font-semibold py-3 rounded-lg 
-                 hover:bg-blue-500 transition-colors shadow-md">
+          <button data-aos="zoom-in" data-aos-delay="600" type="submit" class="w-full bg-blue-600 text-white font-semibold py-3 rounded-lg 
+               hover:bg-blue-500 transition-colors shadow-md">
             Send Message →
           </button>
         </form>
@@ -659,8 +681,14 @@
   </div>
 
   <script src="src/assets/script.js"></script>
+  <script src="node_modules/aos/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 800,
+      once: false
+    });
+  </script>
 
 </body>
 
 </html>
-
