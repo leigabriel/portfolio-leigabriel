@@ -22,7 +22,28 @@ Welcome to my modern, minimalist portfolio, meticulously crafted to showcase my 
 - **HTML**
 - **CSS**
 - **JavaScript**
-- **Tailwind CSS**
+- **[Tailwind CSS](https://tailwindcss.com/)**
+
+---
+
+## 🚀 Tailwind CSS Setup
+
+Want to use Tailwind CSS in your own project?  
+Visit the [official Tailwind CSS documentation](https://tailwindcss.com/docs/installation) for the most up-to-date guide.
+
+**Quick Install (via CDN for rapid prototyping):**
+```html
+<!-- Add this inside your <head> tag -->
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.3.3/dist/tailwind.min.css" rel="stylesheet">
+```
+
+**Recommended Install (with build tools):**
+1. Install Tailwind via npm:
+   ```bash
+   npm install -D tailwindcss
+   npx tailwindcss init
+   ```
+2. Configure your `tailwind.config.js` and CSS entry file as shown in the [docs](https://tailwindcss.com/docs/installation).
 
 ---
 
