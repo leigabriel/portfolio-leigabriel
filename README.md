@@ -54,7 +54,6 @@ Designed with [Fira Code Mono](https://github.com/tonsky/FiraCode), a clean and 
 
 Explore more of my work on GitHub:
 - [portfolio-leigabriel](https://github.com/leigabriel/portfolio-leigabriel) — This portfolio project
-- [leigabriel](https://github.com/leigabriel/leigabriel)
 - [art-gallery](https://github.com/leigabriel/art-gallery)
 - [yourdailyboost](https://github.com/leigabriel/yourdailyboost)
 
