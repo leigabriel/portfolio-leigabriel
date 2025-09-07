@@ -65,9 +65,3 @@ html {
     transition: none !important;
   }
 }
-
-#cursor-text::before {
-  filter: blur(15px);
-  opacity: 0.7;
-  transition: opacity 0.2s, transform 0.2s;
-}

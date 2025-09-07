@@ -95,16 +95,3 @@ const popup = document.getElementById("social-popup");
 toggleBtn.addEventListener("click", () => {
   popup.classList.toggle("hidden");
 });
-
-const homeSection = document.getElementById('home');
-const cursorText = document.getElementById('cursor-text');
-
-homeSection.addEventListener('mousemove', (e) => {
-  cursorText.style.display = 'block';
-  // Move cursor text slightly offset so it doesn't overlap pointer
-  cursorText.style.transform = `translate3d(${e.clientX + 15}px, ${e.clientY + 15}px, 0)`;
-});
-
-homeSection.addEventListener('mouseleave', () => {
-  cursorText.style.display = 'none';
-});
