@@ -89,6 +89,7 @@ if (lightbox && lightboxImg) {
   });
 }
 
+// Social Menu Toggle
 const toggleBtn = document.getElementById("social-toggle");
 const popup = document.getElementById("social-popup");
 

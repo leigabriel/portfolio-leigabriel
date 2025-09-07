@@ -4,13 +4,8 @@
 body {
   font-family: 'Fira Code', monospace;
   overflow-x: hidden;
-  /* No horizontal scroll */
   background-color: #212631;
-  /* Dark bg */
   color: #ebebeb;
-  /* Light text */
-  scroll-behavior: smooth;
-  /* Smooth scroll */
 }
 
 html {
@@ -57,7 +52,6 @@ html {
   background: linear-gradient(180deg, #6366f1, #a855f7);
 }
 
-/* Disable AOS on mobile */
 @media (max-width: 767px) {
   [data-aos] {
     opacity: 1 !important;
