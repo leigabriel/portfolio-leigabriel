@@ -3,10 +3,14 @@
 /* Base styles */
 body {
   font-family: 'Fira Code', monospace;
-  overflow-x: hidden; /* No horizontal scroll */
-  background-color: #212631; /* Dark bg */
-  color: #ebebeb; /* Light text */
-  scroll-behavior: smooth; /* Smooth scroll */
+  overflow-x: hidden;
+  /* No horizontal scroll */
+  background-color: #212631;
+  /* Dark bg */
+  color: #ebebeb;
+  /* Light text */
+  scroll-behavior: smooth;
+  /* Smooth scroll */
 }
 
 html {
@@ -15,21 +19,40 @@ html {
 
 /* Service images: toggle by screen size */
 @media (min-width: 768px) {
-  .service-img.md\:hidden { display: none !important; }
-  .service-img.md\:block { display: block !important; }
+  .service-img.md\:hidden {
+    display: none !important;
+  }
+
+  .service-img.md\:block {
+    display: block !important;
+  }
 }
+
 @media (max-width: 767px) {
-  .service-img.md\:block { display: none !important; }
-  .service-img.md\:hidden { display: block !important; }
+  .service-img.md\:block {
+    display: none !important;
+  }
+
+  .service-img.md\:hidden {
+    display: block !important;
+  }
 }
 
 /* Scrollbar */
-::-webkit-scrollbar { width: 10px; }
-::-webkit-scrollbar-track { background: #212631; border-radius: 10px; }
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #212631;
+  border-radius: 10px;
+}
+
 ::-webkit-scrollbar-thumb {
   background: linear-gradient(180deg, #4f46e5, #9333ea);
   border-radius: 10px;
 }
+
 ::-webkit-scrollbar-thumb:hover {
   background: linear-gradient(180deg, #6366f1, #a855f7);
 }
@@ -41,4 +64,10 @@ html {
     transform: none !important;
     transition: none !important;
   }
+}
+
+#cursor-text::before {
+  filter: blur(15px);
+  opacity: 0.7;
+  transition: opacity 0.2s, transform 0.2s;
 }
