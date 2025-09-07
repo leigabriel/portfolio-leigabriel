@@ -1,4 +1,0 @@
-# Deny all direct access
-<FilesMatch ".*">
-    Require all denied
-</FilesMatch>
