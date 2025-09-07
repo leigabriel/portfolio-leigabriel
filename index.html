@@ -15,6 +15,41 @@
 
 <body>
 
+  <!-- Chatbot Plugin -->
+  <div id="chatbot-plugin" class="z-[9999]">
+    <!-- Toggle Button -->
+    <button id="chat-toggle"
+      class="fixed bottom-6 right-6 w-14 h-14 flex items-center justify-center bg-white rounded-full shadow-lg cursor-pointer shadow-[#212631] hover:bg-gray-400 transition z-[9999]">
+      <img src="https://cdn-icons-png.flaticon.com/128/17583/17583957.png" alt="Chatbot" class="w-7 h-7">
+    </button>
+
+    <!-- Chatbot Box -->
+    <div id="chat-box" class="fixed bottom-22 right-8 w-85 bg-white shadow-xl rounded-xl p-4 hidden flex-col z-[9999]">
+      <h2 class="text-lg font-bold mb-2 text-gray-700">Hi there! Ask me something 😊</h2>
+      <div id="chat-messages" class="h-64 overflow-y-auto mb-2 space-y-2"></div>
+
+      <!-- Predefined Questions -->
+      <div class="flex flex-col gap-2 mb-2">
+        <button class="q-btn px-2 py-1 bg-gray-100 rounded hover:bg-gray-200 text-sm text-gray-800">What do you
+          do?</button>
+        <button class="q-btn px-2 py-1 bg-gray-100 rounded hover:bg-gray-200 text-sm text-gray-800">Show your
+          projects</button>
+        <button class="q-btn px-2 py-1 bg-gray-100 rounded hover:bg-gray-200 text-sm text-gray-800">How can I contact
+          you?</button>
+        <button class="q-btn px-2 py-1 bg-gray-100 rounded hover:bg-gray-200 text-sm text-gray-800">What are your
+          hobbies?</button>
+        <button class="q-btn px-2 py-1 bg-gray-100 rounded hover:bg-gray-200 text-sm text-gray-800">What tools do you
+          use?</button>
+        <button class="q-btn px-2 py-1 bg-gray-100 rounded hover:bg-gray-200 text-sm text-gray-800">Where are you
+          from?</button>
+        <button class="q-btn px-2 py-1 bg-gray-100 rounded hover:bg-gray-200 text-sm text-gray-800">Favorite
+          anime?</button>
+        <button class="q-btn px-2 py-1 bg-gray-100 rounded hover:bg-gray-200 text-sm text-gray-800">Any tips for
+          learning design?</button>
+      </div>
+    </div>
+  </div>
+
   <!-- Navbar -->
   <nav id="navbar" class="fixed top-0 left-0 w-full flex items-center justify-between text-[#ebebeb] px-6 py-4 z-50">
 
@@ -631,6 +666,7 @@
 
   <!--Scripts-->
   <script src="src/assets/script.js"></script>
+  <script src="src/assets/chatbot.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     function initAOS() {
