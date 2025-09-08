@@ -59,3 +59,32 @@ html {
     transition: none !important;
   }
 }
+
+/* Marquee Animation for Graphic*/
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 20s linear infinite;
+}
+
+/* Hide scrollbar for WebKit browsers*/
+.scrollbar-custom::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-custom {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.scrollbar-custom {
+  overflow: auto;
+}
