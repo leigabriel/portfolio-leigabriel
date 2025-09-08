@@ -53,6 +53,8 @@ Visit the [official Tailwind CSS documentation](https://tailwindcss.com/docs/ins
 portfolio-leigabriel/
 ├── src/
 │   ├── assets/
+│   │   ├── js/
+│   │   ├── css/
 │   ├── img/
 ├── README.md
 ├── index.html
