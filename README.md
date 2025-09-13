@@ -1,27 +1,25 @@
-# Lei Gabriel's React Portfolio
+# React Portfolio
 
-Welcome to my personal portfolio built with React and Vite! This project showcases my skills in modern web development, featuring interactive UI components, responsive design, and optimized performance.
+A minimal portfolio built with React, Vite, and Tailwind CSS to showcase UI development skills.
 
 ## Features
 
-- **React + Vite**: Fast development environment with Hot Module Replacement (HMR) for instant updates.
-- **Custom Components**: Reusable and modular components for scalability.
-- **Responsive Design**: Mobile-friendly layouts using CSS and Flexbox.
-- **ESLint Integration**: Code quality and consistency maintained with ESLint.
+- Built with **React** & **Vite** for fast development and performance.
+- Styled using **Tailwind CSS**.
+- Modular, responsive components.
 
-## Projects
+## Folder Structure
 
-Explore some of my featured projects:
-
-- **Project One**: A dynamic web app demonstrating state management and API integration.
-- **Project Two**: A responsive landing page with smooth animations and transitions.
-- **Project Three**: A dashboard with data visualization using chart libraries.
-
-## Get in Touch
-
-Interested in collaborating or learning more?  
-Feel free to [contact me](mailto:leigabriel@example.com) or connect on [LinkedIn](https://www.linkedin.com/in/leigabriel).
+```
+src/
+  assets/        # Other static files
+  components/    # Reusable UI components
+  App.css        # Main App styling
+  App.jsx        # Root React component
+  main.jsx       # Entry point
+```
 
 ---
 
-Thank you for visiting my portfolio!
+© 2025 Lei Gabriel  
+Credits: Built with [Vite](https://vitejs.dev/), [React](https://react.dev/), and [Tailwind CSS](https://tailwindcss.com/)
