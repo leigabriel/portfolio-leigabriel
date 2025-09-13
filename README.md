@@ -1,93 +1,27 @@
-# Lei Gabriel — Personal Portfolio
+# Lei Gabriel's React Portfolio
 
-Welcome to my modern, minimalist portfolio, meticulously crafted to showcase my expertise as a **Graphic Designer**, **UI/UX Designer**, and **Frontend Developer**. This site emphasizes clean visuals, intuitive navigation, and functional design, reflecting a professional and elegant aesthetic.
+Welcome to my personal portfolio built with React and Vite! This project showcases my skills in modern web development, featuring interactive UI components, responsive design, and optimized performance.
 
----
+## Features
 
-## ✨ Features
+- **React + Vite**: Fast development environment with Hot Module Replacement (HMR) for instant updates.
+- **Custom Components**: Reusable and modular components for scalability.
+- **Responsive Design**: Mobile-friendly layouts using CSS and Flexbox.
+- **ESLint Integration**: Code quality and consistency maintained with ESLint.
 
-- **Responsive Design**  
-  Seamlessly adapts to all screen sizes for an optimal viewing experience.
+## Projects
 
-- **Dynamic Project Showcase**  
-  Effortlessly update and present your work in a visually appealing format.
+Explore some of my featured projects:
 
-- **Intuitive UI/UX**  
-  Simple, clear navigation ensures visitors can easily explore your projects.
+- **Project One**: A dynamic web app demonstrating state management and API integration.
+- **Project Two**: A responsive landing page with smooth animations and transitions.
+- **Project Three**: A dashboard with data visualization using chart libraries.
 
----
+## Get in Touch
 
-## 🛠️ Tech Stack
-
-- **HTML**
-- **CSS**
-- **JavaScript**
-- **[Tailwind CSS](https://tailwindcss.com/)**
+Interested in collaborating or learning more?  
+Feel free to [contact me](mailto:leigabriel@example.com) or connect on [LinkedIn](https://www.linkedin.com/in/leigabriel).
 
 ---
 
-## 🚀 Tailwind CSS Setup
-
-Want to use Tailwind CSS in your own project?  
-Visit the [official Tailwind CSS documentation](https://tailwindcss.com/docs/installation) for the most up-to-date guide.
-
-**Quick Install (via CDN for rapid prototyping):**
-```html
-<!-- Add this inside your <head> tag -->
-<link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.3.3/dist/tailwind.min.css" rel="stylesheet">
-```
-
-**Recommended Install (with build tools):**
-1. Install Tailwind via npm:
-   ```bash
-   npm install -D tailwindcss
-   npx tailwindcss init
-   ```
-2. Configure your `tailwind.config.js` and CSS entry file as shown in the [docs](https://tailwindcss.com/docs/installation).
-
----
-
-## 🗂️ File Structure
-
-```
-portfolio-leigabriel/
-├── src/
-│   ├── assets/
-│   │   ├── js/
-│   │   ├── css/
-│   ├── img/
-├── README.md
-├── index.html
-```
-
----
-
-## 🖋️ Typography
-
-Designed with [Fira Code Mono](https://github.com/tonsky/FiraCode), a clean and legible font that enhances the minimalist aesthetic.
-
----
-
-## 📂 Related Projects
-
-Explore more of my work on GitHub:
-- [portfolio-leigabriel](https://github.com/leigabriel/portfolio-leigabriel) — This portfolio project
-- [art-gallery](https://github.com/leigabriel/art-gallery)
-- [yourdailyboost](https://github.com/leigabriel/yourdailyboost)
-
----
-
-## 📩 Contact
-
-For inquiries, feedback, or collaboration opportunities, please [email me](mailto:malibiranleigabriel@gmail.com).
-
----
-
-## ⚠️ Copyright & Usage
-
-If you wish to use, modify, or share any part of this project, **please credit the owner and obtain explicit permission**.  
-All content is protected by copyright and may not be used without consent.
-
----
-
-© 2025 Lei Gabriel. All rights reserved.
+Thank you for visiting my portfolio!
