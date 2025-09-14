@@ -35,7 +35,7 @@ export default function Navbar() {
     return (
         <>
             {/* Desktop Navbar */}
-            <nav className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 bg-[#212631]/50 backdrop-blur-lg px-6 py-3 rounded-full shadow-2xl flex items-center justify-center gap-6 w-max md:flex hidden">
+            <nav className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 bg-[#212631]/50 backdrop-blur-lg px-6 py-3 rounded-full shadow-2xl  items-center justify-center gap-6 w-max md:flex hidden">
                 {links.map((link, i) => (
                     <div
                         key={i}
