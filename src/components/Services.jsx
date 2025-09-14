@@ -1,10 +1,21 @@
 import { useState, useRef, useEffect } from "react";
-import { motion, useAnimation } from "framer-motion";
-import { useInView } from "framer-motion";
+import { motion, useAnimation, useInView } from "framer-motion";
+
+// ✅ Simple media query hook
+function useMediaQuery(query) {
+    const [matches, setMatches] = useState(false);
+    useEffect(() => {
+        const media = window.matchMedia(query);
+        if (media.matches !== matches) setMatches(media.matches);
+        const listener = () => setMatches(media.matches);
+        media.addEventListener("change", listener);
+        return () => media.removeEventListener("change", listener);
+    }, [matches, query]);
+    return matches;
+}
 
 export default function Services() {
     const [popupImg, setPopupImg] = useState(null);
-
     const handleImgClick = (src) => setPopupImg(src);
     const closePopup = () => setPopupImg(null);
 
@@ -12,17 +23,28 @@ export default function Services() {
     const ref = useRef(null);
     const inView = useInView(ref, { once: false, margin: "-100px" });
 
+    // ✅ Detect if mobile (<768px)
+    const isMobile = useMediaQuery("(max-width: 768px)");
+
     useEffect(() => {
         if (inView) controls.start("visible");
         else controls.start("hidden");
     }, [inView, controls]);
 
-    const fadeInUp = {
-        hidden: { opacity: 0, y: 40 },
+    // ✅ Different animations depending on device
+    const fadeInResponsive = {
+        hidden: isMobile
+            ? { opacity: 0, y: 40 } // slide up on mobile
+            : { opacity: 0, x: -40 }, // slide left on desktop
         visible: (i = 0) => ({
             opacity: 1,
+            x: 0,
             y: 0,
-            transition: { delay: i * 0.1, duration: 0.5, ease: "easeOut" }, // 500ms
+            transition: {
+                delay: i * 0.15,
+                duration: isMobile ? 0.4 : 0.6,
+                ease: "easeOut",
+            },
         }),
     };
 
@@ -57,7 +79,7 @@ export default function Services() {
                         ref={ref}
                         initial="hidden"
                         animate={controls}
-                        variants={fadeInUp}
+                        variants={fadeInResponsive}
                         custom={0}
                         className="text-center md:text-left mb-10 sm:mb-12"
                     >
@@ -77,7 +99,7 @@ export default function Services() {
                                 ref={ref}
                                 initial="hidden"
                                 animate={controls}
-                                variants={fadeInUp}
+                                variants={fadeInResponsive}
                                 custom={index + 1}
                                 className="group flex flex-col md:flex-row items-stretch md:items-center justify-between py-8 sm:py-10 px-3 sm:px-6 transition-colors duration-200 hover:bg-gray-100/40 relative cursor-pointer overflow-visible rounded-xl"
                             >

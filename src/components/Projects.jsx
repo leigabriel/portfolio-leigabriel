@@ -1,16 +1,25 @@
 import { motion, useAnimation } from "framer-motion";
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
 import { useInView } from "framer-motion";
 
 export default function Projects() {
     const controls = useAnimation();
     const ref = useRef(null);
     const inView = useInView(ref, { once: false, margin: "-100px" });
+    const [isMobile, setIsMobile] = useState(false);
 
     useEffect(() => {
         if (inView) controls.start("visible");
         else controls.start("hidden");
     }, [inView, controls]);
+
+    // Detect screen size for responsive animation
+    useEffect(() => {
+        const handleResize = () => setIsMobile(window.innerWidth < 768);
+        handleResize();
+        window.addEventListener("resize", handleResize);
+        return () => window.removeEventListener("resize", handleResize);
+    }, []);
 
     const projectCards = [
         {
@@ -33,13 +42,18 @@ export default function Projects() {
         },
     ];
 
+    // Responsive animation
     const cardAnimation = {
-        hidden: { opacity: 0, y: 60, scale: 0.95 },
+        hidden: { opacity: 0, y: isMobile ? 30 : 60, scale: 0.95 },
         visible: (i = 0) => ({
             opacity: 1,
             y: 0,
             scale: 1,
-            transition: { delay: i * 0.2, duration: 0.6, ease: "backOut" },
+            transition: {
+                delay: i * (isMobile ? 0.1 : 0.2),
+                duration: isMobile ? 0.4 : 0.6,
+                ease: "backOut",
+            },
         }),
     };
 

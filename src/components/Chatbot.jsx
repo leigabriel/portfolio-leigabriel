@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 export default function Chatbot() {
     const [open, setOpen] = useState(false);
@@ -40,42 +41,50 @@ export default function Chatbot() {
                 />
             </button>
 
-            {/* Chatbot Box */}
-            {open && (
-                <div className="fixed bottom-24 right-8 w-80 bg-white/70 backdrop-blur-lg shadow-2xl shadow-[#212631] rounded-xl p-4 flex flex-col z-[9999]">
-                    <h2 className="text-lg font-bold mb-2 text-gray-700">
-                        Hi there! Ask me something 😊
-                    </h2>
+            {/* Chatbot Box with Animation */}
+            <AnimatePresence>
+                {open && (
+                    <motion.div
+                        initial={{ opacity: 0, y: 50, scale: 0.9 }}
+                        animate={{ opacity: 1, y: 0, scale: 1 }}
+                        exit={{ opacity: 0, y: 50, scale: 0.9 }}
+                        transition={{ duration: 0.4, ease: "easeOut" }}
+                        className="fixed bottom-24 right-8 w-80 bg-white/70 backdrop-blur-lg shadow-2xl shadow-[#212631] rounded-xl p-4 flex flex-col z-[9999]"
+                    >
+                        <h2 className="text-lg font-bold mb-2 text-gray-700">
+                            Hi there! Ask me something 😊
+                        </h2>
 
-                    {/* Messages */}
-                    <div className="h-64 overflow-y-auto mb-2 space-y-2">
-                        {messages.map((msg, i) => (
-                            <div
-                                key={i}
-                                className={`px-3 py-1 rounded-xl max-w-[80%] font-medium ${msg.sender === "user"
-                                        ? "ml-auto bg-gray-100 text-gray-800 text-right"
-                                        : "mr-auto bg-blue-500 text-white text-left"
-                                    }`}
-                            >
-                                {msg.text}
-                            </div>
-                        ))}
-                    </div>
+                        {/* Messages */}
+                        <div className="h-64 overflow-y-auto mb-2 space-y-2">
+                            {messages.map((msg, i) => (
+                                <div
+                                    key={i}
+                                    className={`px-3 py-1 rounded-xl max-w-[80%] font-medium ${msg.sender === "user"
+                                            ? "ml-auto bg-gray-100 text-gray-800 text-right"
+                                            : "mr-auto bg-blue-500 text-white text-left"
+                                        }`}
+                                >
+                                    {msg.text}
+                                </div>
+                            ))}
+                        </div>
 
-                    {/* Predefined Questions */}
-                    <div className="flex flex-col gap-2">
-                        {Object.keys(predefinedAnswers).map((q, i) => (
-                            <button
-                                key={i}
-                                onClick={() => askQuestion(q)}
-                                className="px-2 py-1 bg-gray-100 rounded hover:bg-gray-200 text-sm text-gray-800"
-                            >
-                                {q}
-                            </button>
-                        ))}
-                    </div>
-                </div>
-            )}
+                        {/* Predefined Questions */}
+                        <div className="flex flex-col gap-2">
+                            {Object.keys(predefinedAnswers).map((q, i) => (
+                                <button
+                                    key={i}
+                                    onClick={() => askQuestion(q)}
+                                    className="px-2 py-1 bg-gray-100 rounded hover:bg-gray-200 text-sm text-gray-800"
+                                >
+                                    {q}
+                                </button>
+                            ))}
+                        </div>
+                    </motion.div>
+                )}
+            </AnimatePresence>
         </div>
     );
 }

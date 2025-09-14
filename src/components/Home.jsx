@@ -104,7 +104,7 @@ export default function HomeWithSocial() {
 
                 {/* Buttons Row */}
                 <motion.div
-                    className="mt-8 flex flex-wrap justify-center gap-4 items-center relative"
+                    className="mt-8 flex flex-row justify-center gap-6 items-center relative"
                     variants={containerVariants}
                     initial="hidden"
                     animate="visible"
@@ -137,16 +137,26 @@ export default function HomeWithSocial() {
                             {btn.href ? (
                                 <a
                                     href={btn.href}
-                                    className={`border-2 border-[#212631] rounded-full p-3 flex items-center justify-center transition ${btn.style}`}
+                                    className={`border-2 border-[#212631] rounded-full p-3 flex items-center justify-center 
+                               transform transition-transform duration-300 ease-out hover:scale-110 ${btn.style}`}
                                 >
-                                    <img src={btn.icon} alt={btn.label} className="w-5 h-5" />
+                                    <img
+                                        src={btn.icon}
+                                        alt={btn.label}
+                                        className="w-6 h-6 transition-transform duration-300 ease-out group-hover:scale-125"
+                                    />
                                 </a>
                             ) : (
                                 <button
                                     onClick={btn.onClick}
-                                    className={`border-2 border-[#212631] rounded-full p-3 flex items-center justify-center shadow-lg transition ${btn.style}`}
+                                    className={`border-2 border-[#212631] rounded-full p-3 flex items-center justify-center 
+                               shadow-lg transform cursor-pointer transition-transform duration-300 ease-out hover:scale-110 ${btn.style}`}
                                 >
-                                    <img src={btn.icon} alt={btn.label} className="w-5 h-5" />
+                                    <img
+                                        src={btn.icon}
+                                        alt={btn.label}
+                                        className="w-6 h-6 transition-transform duration-300 ease-out group-hover:scale-125"
+                                    />
                                 </button>
                             )}
                             <span className="absolute left-1/2 -translate-x-1/2 top-full mt-2 px-2 py-1 bg-black text-white text-xs rounded opacity-0 group-hover:opacity-100 transition pointer-events-none whitespace-nowrap z-10">
