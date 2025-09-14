@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { motion } from "framer-motion";
 
 export default function HomeWithSocial() {
     const [socialOpen, setSocialOpen] = useState(false);
@@ -55,6 +56,22 @@ export default function HomeWithSocial() {
         },
     ];
 
+    const containerVariants = {
+        hidden: { opacity: 0 },
+        visible: {
+            opacity: 1,
+            transition: {
+                staggerChildren: 0.2,
+                when: "beforeChildren"
+            }
+        },
+    };
+
+    const itemVariants = {
+        hidden: { opacity: 0, y: 30 },
+        visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } },
+    };
+
     return (
         <>
             {/* Home Section */}
@@ -62,56 +79,99 @@ export default function HomeWithSocial() {
                 id="home"
                 className="min-h-screen flex flex-col justify-center items-center text-center px-4 sm:px-6 md:px-12 bg-white rounded-b-4xl text-black relative"
             >
-                <h1 className="font-extrabold uppercase leading-snug tracking-tight text-3xl sm:text-5xl md:text-6xl lg:text-7xl max-w-2xl sm:max-w-3xl md:max-w-4xl lg:max-w-6xl">
+                {/* Heading */}
+                <motion.h1
+                    className="font-extrabold uppercase leading-snug tracking-tight text-3xl sm:text-5xl md:text-6xl lg:text-7xl max-w-2xl sm:max-w-3xl md:max-w-4xl lg:max-w-6xl"
+                    initial={{ opacity: 0, y: -50 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.7, ease: "easeOut" }}
+                >
                     Hi, I'm Lei Gabriel. <br />
                     A Frontend Developer, <br />
                     UI Designer, and <br />
                     Graphic Design Artist.
-                </h1>
+                </motion.h1>
 
-                <p className="mt-6 text-sm sm:text-base md:text-lg lg:text-xl max-w-md sm:max-w-lg md:max-w-2xl font-medium text-gray-700">
+                {/* Paragraph */}
+                <motion.p
+                    className="mt-6 text-sm sm:text-base md:text-lg lg:text-xl max-w-md sm:max-w-lg md:max-w-2xl font-medium text-gray-700"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.3, duration: 0.7, ease: "easeOut" }}
+                >
                     I craft engaging digital experiences through clean code, thoughtful design, and creative visuals.
-                </p>
+                </motion.p>
 
-                {/* Buttons Row (horizontal on mobile) */}
-                <div className="mt-8 flex flex-wrap justify-center gap-4 items-center relative">
-                    <a
-                        href="#projects"
-                        className="px-6 py-3 bg-black text-white rounded-full font-semibold text-xs sm:text-base hover:bg-gray-800 transition"
-                    >
-                        View Projects
-                    </a>
-                    <a
-                        href="#contact"
-                        className="px-6 py-3 border-2 border-black text-black rounded-full font-semibold text-xs sm:text-base hover:bg-gray-100 transition"
-                    >
-                        Contact Me
-                    </a>
+                {/* Buttons Row */}
+                <motion.div
+                    className="mt-8 flex flex-wrap justify-center gap-4 items-center relative"
+                    variants={containerVariants}
+                    initial="hidden"
+                    animate="visible"
+                >
+                    {[
+                        {
+                            label: "View Projects",
+                            icon: "https://cdn-icons-png.flaticon.com/128/3735/3735057.png",
+                            href: "#projects",
+                            style: "hover:bg-yellow-400",
+                        },
+                        {
+                            label: "Contact Me",
+                            icon: "https://cdn-icons-png.flaticon.com/128/9068/9068642.png",
+                            href: "#contact",
+                            style: "hover:bg-blue-400",
+                        },
+                        {
+                            label: "Social",
+                            icon: "https://cdn-icons-png.flaticon.com/128/3631/3631618.png",
+                            onClick: () => setSocialOpen(!socialOpen),
+                            style: "hover:bg-red-400",
+                        },
+                    ].map((btn, i) => (
+                        <motion.div
+                            key={i}
+                            className="relative group"
+                            variants={itemVariants}
+                        >
+                            {btn.href ? (
+                                <a
+                                    href={btn.href}
+                                    className={`border-2 border-[#212631] rounded-full p-3 flex items-center justify-center transition ${btn.style}`}
+                                >
+                                    <img src={btn.icon} alt={btn.label} className="w-5 h-5" />
+                                </a>
+                            ) : (
+                                <button
+                                    onClick={btn.onClick}
+                                    className={`border-2 border-[#212631] rounded-full p-3 flex items-center justify-center shadow-lg transition ${btn.style}`}
+                                >
+                                    <img src={btn.icon} alt={btn.label} className="w-5 h-5" />
+                                </button>
+                            )}
+                            <span className="absolute left-1/2 -translate-x-1/2 top-full mt-2 px-2 py-1 bg-black text-white text-xs rounded opacity-0 group-hover:opacity-100 transition pointer-events-none whitespace-nowrap z-10">
+                                {btn.label}
+                            </span>
+                        </motion.div>
+                    ))}
+                </motion.div>
 
-                    {/* Social Button */}
-                    <button
-                        onClick={() => setSocialOpen(!socialOpen)}
-                        className="px-4 py-3 bg-yellow-400 rounded-full shadow-lg hover:bg-yellow-300 transition flex items-center gap-2 font-semibold text-xs sm:text-base"
-                    >
-                        <img
-                            src="https://cdn-icons-png.flaticon.com/128/3631/3631618.png"
-                            alt="Social"
-                            className="w-5 h-5"
-                        />
-                        Social
-                    </button>
-                </div>
-
-                {/* Social Popup Floating */}
+                {/* Social Popup */}
                 {socialOpen && (
                     <>
-                        {/* Overlay background */}
-                        <div
+                        <motion.div
                             className="fixed inset-0 bg-black/40 z-40"
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            exit={{ opacity: 0 }}
                             onClick={() => setSocialOpen(false)}
-                        ></div>
-
-                        <div className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 sm:w-96 bg-[#212631]/90 backdrop-blur-md text-white rounded-2xl shadow-2xl p-6 z-50 transition-all animate-fadeIn">
+                        />
+                        <motion.div
+                            className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 sm:w-96 bg-[#212631]/90 backdrop-blur-md text-white rounded-2xl shadow-2xl p-6 z-50"
+                            initial={{ opacity: 0, y: 50, scale: 0.9 }}
+                            animate={{ opacity: 1, y: 0, scale: 1 }}
+                            transition={{ duration: 0.5, ease: "easeOut" }}
+                        >
                             <div className="flex justify-between items-center mb-4">
                                 <h2 className="text-lg font-bold">Follow me on</h2>
                                 <button
@@ -124,7 +184,12 @@ export default function HomeWithSocial() {
 
                             <ul className="flex flex-col gap-3 text-sm">
                                 {socialLinks.map((social, i) => (
-                                    <li key={i}>
+                                    <motion.li
+                                        key={i}
+                                        initial={{ opacity: 0, x: -30 }}
+                                        animate={{ opacity: 1, x: 0 }}
+                                        transition={{ delay: i * 0.1, duration: 0.4 }}
+                                    >
                                         <a
                                             href={social.url}
                                             target="_blank"
@@ -145,10 +210,10 @@ export default function HomeWithSocial() {
                                                 </p>
                                             </div>
                                         </a>
-                                    </li>
+                                    </motion.li>
                                 ))}
                             </ul>
-                        </div>
+                        </motion.div>
                     </>
                 )}
             </section>

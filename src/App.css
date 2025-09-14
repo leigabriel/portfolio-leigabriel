@@ -4,6 +4,7 @@
 body {
     font-family: 'Fira Code', monospace;
     overflow-x: hidden;
+    background-color: #212631;
 }
 
 html {
@@ -33,7 +34,7 @@ html {
 
 /* Scrollbar */
 ::-webkit-scrollbar {
-    width: 10px;
+    width: 4px;
 }
 
 ::-webkit-scrollbar-track {
