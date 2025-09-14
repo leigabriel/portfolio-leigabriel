@@ -1,52 +1,9 @@
-import { useState, useRef, useEffect } from "react";
-import { motion, useAnimation, useInView } from "framer-motion";
-
-// ✅ Simple media query hook
-function useMediaQuery(query) {
-    const [matches, setMatches] = useState(false);
-    useEffect(() => {
-        const media = window.matchMedia(query);
-        if (media.matches !== matches) setMatches(media.matches);
-        const listener = () => setMatches(media.matches);
-        media.addEventListener("change", listener);
-        return () => media.removeEventListener("change", listener);
-    }, [matches, query]);
-    return matches;
-}
+import { useState } from "react";
 
 export default function Services() {
     const [popupImg, setPopupImg] = useState(null);
     const handleImgClick = (src) => setPopupImg(src);
     const closePopup = () => setPopupImg(null);
-
-    const controls = useAnimation();
-    const ref = useRef(null);
-    const inView = useInView(ref, { once: false, margin: "-100px" });
-
-    // ✅ Detect if mobile (<768px)
-    const isMobile = useMediaQuery("(max-width: 768px)");
-
-    useEffect(() => {
-        if (inView) controls.start("visible");
-        else controls.start("hidden");
-    }, [inView, controls]);
-
-    // ✅ Different animations depending on device
-    const fadeInResponsive = {
-        hidden: isMobile
-            ? { opacity: 0, y: 40 } // slide up on mobile
-            : { opacity: 0, x: -40 }, // slide left on desktop
-        visible: (i = 0) => ({
-            opacity: 1,
-            x: 0,
-            y: 0,
-            transition: {
-                delay: i * 0.15,
-                duration: isMobile ? 0.4 : 0.6,
-                ease: "easeOut",
-            },
-        }),
-    };
 
     const services = [
         {
@@ -75,32 +32,20 @@ export default function Services() {
             >
                 <div className="max-w-7xl w-full mx-auto relative overflow-visible">
                     {/* Section Header */}
-                    <motion.div
-                        ref={ref}
-                        initial="hidden"
-                        animate={controls}
-                        variants={fadeInResponsive}
-                        custom={0}
-                        className="text-center md:text-left mb-10 sm:mb-12"
-                    >
+                    <div className="text-center md:text-left mb-10 sm:mb-12">
                         <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold tracking-widest text-[#212631] uppercase">
                             My Services
                         </h2>
                         <p className="mt-3 text-sm sm:text-base md:text-lg text-gray-700 font-normal">
                             What I offer as a creative developer & designer
                         </p>
-                    </motion.div>
+                    </div>
 
                     {/* Services Wrapper */}
                     <div className="gallery divide-y divide-gray-200">
                         {services.map((service, index) => (
-                            <motion.div
+                            <div
                                 key={index}
-                                ref={ref}
-                                initial="hidden"
-                                animate={controls}
-                                variants={fadeInResponsive}
-                                custom={index + 1}
                                 className="group flex flex-col md:flex-row items-stretch md:items-center justify-between py-8 sm:py-10 px-3 sm:px-6 transition-colors duration-200 hover:bg-gray-100/40 relative cursor-pointer overflow-visible rounded-xl"
                             >
                                 <div className="flex-1 z-10 text-center md:text-left">
@@ -127,7 +72,7 @@ export default function Services() {
                                     className="block md:hidden mt-6 w-full max-w-xs sm:max-w-sm h-40 sm:h-52 object-cover mx-auto rounded-2xl shadow-lg cursor-pointer"
                                     onClick={() => handleImgClick(service.img)}
                                 />
-                            </motion.div>
+                            </div>
                         ))}
                     </div>
                 </div>
