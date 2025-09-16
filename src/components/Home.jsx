@@ -144,39 +144,39 @@ export default function HomeWithSocial() {
                     {/* Projects */}
                     <a
                         href="#projects"
-                        className="p-3 border-2 border-[#212631] bg-yellow-300 hover:bg-yellow-400 transition flex items-center justify-center"
+                        className="p-3 border-2 border-[#212631] rounded-xl bg-yellow-400 hover:bg-yellow-300 transition flex items-center hover:scale-120 justify-center"
                         aria-label="View Projects"
                     >
                         <img
                             src="https://cdn-icons-png.flaticon.com/128/1659/1659067.png"
                             alt="Projects"
-                            className="w-5 h-5"
+                            className="w-7 h-7"
                         />
                     </a>
 
                     {/* Contact */}
                     <a
                         href="#contact"
-                        className="p-3 border-2 border-[#212631] bg-blue-300 hover:bg-blue-400 transition flex items-center justify-center"
+                        className="p-3 border-2 border-[#212631] rounded-xl bg-blue-400 hover:bg-blue-300 transition flex items-center hover:scale-120 justify-center"
                         aria-label="Contact Me"
                     >
                         <img
                             src="https://cdn-icons-png.flaticon.com/128/646/646094.png"
                             alt="Contact"
-                            className="w-5 h-5"
+                            className="w-7 h-7"
                         />
                     </a>
 
                     {/* Social */}
                     <button
                         onClick={() => setSocialOpen(true)}
-                        className="p-3 border-2 border-[#212631] bg-red-300 hover:bg-red-400 transition flex items-center justify-center"
+                        className="p-3 border-2 border-[#212631] rounded-xl bg-red-400 hover:bg-red-300 transition flex items-center hover:scale-120 justify-center"
                         aria-label="Social Links"
                     >
                         <img
                             src="https://cdn-icons-png.flaticon.com/128/1828/1828926.png"
                             alt="Social"
-                            className="w-5 h-5"
+                            className="w-7 h-7"
                         />
                     </button>
                 </motion.div>

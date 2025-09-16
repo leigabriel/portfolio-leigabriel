@@ -87,7 +87,7 @@ export default function Navbar() {
                             animate={{ x: 0 }}
                             exit={{ x: "100%" }}
                             transition={{ type: "tween", duration: 0.4, ease: "easeOut" }}
-                            className="fixed top-0 right-0 h-full w-64 bg-[#212631] text-white z-50 shadow-2xl flex flex-col p-6"
+                            className="fixed top-0 right-0 h-full w-64 bg-[#212631]/50 backdrop-blur-md text-white z-50 shadow-2xl flex flex-col p-6"
                         >
                             {/* Close Button */}
                             <button
@@ -107,8 +107,9 @@ export default function Navbar() {
                                         transition: { staggerChildren: 0.1 },
                                     },
                                 }}
-                                className="flex flex-col gap-6 mt-8 text-lg font-semibold"
+                                className="flex flex-col gap-6 mt-8 text-2xl font-semibold"
                             >
+
                                 {links.map((link, i) => (
                                     <motion.li
                                         key={i}
