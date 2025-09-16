@@ -64,7 +64,7 @@ export default function HomeWithSocial() {
         >
 
             {/* Background Marquee */}
-            <div className="absolute top-1/2 left-0 w-full overflow-hidden -translate-y-1/2">
+            <div className="absolute top-1/2 left-0 w-full overflow-hidden -translate-y-1/2 z-0">
                 <div className="flex whitespace-nowrap animate-marquee">
                     <span className="mx-8 mb-65 sm:mt-65 text-[1.5rem] sm:text-[8rem] font-bold text-[#212631] opacity-20">
                         LEI GABRIEL • GRAPHIC DESIGNER • UI/UX DESIGNER • FRONTEND DEV •
@@ -79,7 +79,7 @@ export default function HomeWithSocial() {
             <div
                 className="grid grid-cols-1 gap-y-8 sm:grid-cols-3 sm:grid-rows-3 sm:gap-6 
                    max-w-7xl w-full mx-auto items-center justify-items-center 
-                   text-center sm:text-left"
+                   text-center sm:text-left z-10 relative"
             >
                 {/* Left Title */}
                 <motion.div
@@ -134,6 +134,7 @@ export default function HomeWithSocial() {
                     </ul>
                 </motion.div>
                                 
+                {/* Bottom Right */}
                 <motion.div
                     className="flex justify-center gap-6 sm:mt-36 sm:col-start-3 sm:row-start-3 sm:justify-self-end"
                     initial={{ opacity: 0, x: 40 }}
