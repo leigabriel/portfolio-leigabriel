@@ -37,7 +37,7 @@ export default function Projects() {
             id="projects"
             className="min-h-screen py-16 px-4 sm:px-6 md:px-10 bg-blue-950 text-white"
         >
-            {/* Section Header */}
+            {/* Projects Header */}
             <div className="max-w-7xl mx-auto text-center mb-12">
                 <h2 className="text-3xl sm:text-5xl md:text-6xl font-extrabold mb-4">
                     Projects
@@ -48,14 +48,14 @@ export default function Projects() {
                 </p>
             </div>
 
-            {/* Project Cards */}
+            {/* Cards Grid */}
             <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 max-w-7xl mx-auto">
                 {projectCards.map((project) => (
                     <div
                         key={project.id}
                         className={`gallery flex flex-col ${project.bg} text-black rounded-2xl shadow-lg overflow-hidden hover:scale-[1.02] transition`}
                     >
-                        {/* Image */}
+                        {/* Card Image */}
                         <div className="relative h-48 sm:h-56 w-full overflow-hidden">
                             <img
                                 src={project.img}
@@ -67,7 +67,7 @@ export default function Projects() {
                             </div>
                         </div>
 
-                        {/* Content */}
+                        {/* Card Content */}
                         <div className="flex flex-col justify-between flex-1 p-6">
                             <div className="space-y-3">
                                 <span className="text-3xl font-extrabold">{`0${project.id}.`}</span>

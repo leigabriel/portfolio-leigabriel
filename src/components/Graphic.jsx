@@ -21,13 +21,13 @@ export default function Graphic() {
         <section id="graphic" className="py-2 font-semibold px-4 mt-0 bg-white">
             <div className="max-w-full mx-auto">
                 <div className="relative">
-                    {/* Left fade */}
+                    {/* Left Fade */}
                     <div className="pointer-events-none absolute left-0 top-0 h-full w-16 bg-gradient-to-r from-white via-white/80 to-transparent z-10"></div>
 
-                    {/* Right fade */}
+                    {/* Right Fade */}
                     <div className="pointer-events-none absolute right-0 top-0 h-full w-16 bg-gradient-to-l from-white via-white/80 to-transparent z-10"></div>
 
-                    {/* Scrollable Gallery */}
+                    {/* Gallery Scroll */}
                     <div className="overflow-x-hidden">
                         <div className="flex gap-10 animate-marquee w-max px-4">
                             {[...images, ...images].map((src, index) => (
@@ -55,7 +55,7 @@ export default function Graphic() {
                 </div>
             </div>
 
-            {/* Modal */}
+            {/* Image Modal */}
             {selectedImg && (
                 <div
                     className="fixed inset-0 bg-black/80 flex items-center justify-center z-50"

@@ -59,37 +59,54 @@ export default function HomeWithSocial() {
     return (
         <section
             id="home"
-            className="min-h-screen flex items-center rounded-b-4xl justify-center bg-white text-[#212631] px-6"
+            className="min-h-screen flex items-center rounded-b-4xl justify-center bg-white text-[#212631] px-4 sm:px-6"
+            
         >
-            {/*  CONTAINER to prevent edges */}
-            <div className="grid grid-cols-1 grid-rows-5 sm:grid-cols-3 sm:grid-rows-3 gap-6 
-                            max-w-7xl w-full mx-auto items-center justify-items-center text-center">
-                {/* Top Left */}
+
+            {/* Background Marquee */}
+            <div className="absolute top-1/2 left-0 w-full overflow-hidden -translate-y-1/2">
+                <div className="flex whitespace-nowrap animate-marquee">
+                    <span className="mx-8 mb-65 sm:mt-65 text-[1.5rem] sm:text-[8rem] font-bold text-[#212631] opacity-20">
+                        LEI GABRIEL • GRAPHIC DESIGNER • UI/UX DESIGNER • FRONTEND DEV •
+                    </span>
+                    <span className="mx-8 mb-65 sm:mt-65 text-[1.5rem] sm:text-[8rem] font-bold text-[#212631] opacity-20">
+                        LEI GABRIEL • GRAPHIC DESIGNER • UI/UX DESIGNER • FRONTEND DEV •
+                    </span>
+                </div>
+            </div>
+
+            {/* Main Container */}
+            <div
+                className="grid grid-cols-1 gap-y-8 sm:grid-cols-3 sm:grid-rows-3 sm:gap-6 
+                   max-w-7xl w-full mx-auto items-center justify-items-center 
+                   text-center sm:text-left"
+            >
+                {/* Left Title */}
                 <motion.div
-                    className="sm:col-start-1 sm:row-start-1 self-start justify-self-start text-left max-w-xs"
+                    className="self-start sm:col-start-1 sm:row-start-1 text-center sm:text-left"
                     initial={{ opacity: 0, x: -40 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.6 }}
                 >
-                    <h2 className="font-bold text-4xl sm:text-7xl">Lei Gabriel</h2>
+                    <h2 className="font-bold text-3xl sm:text-8xl">Lei Gabriel</h2>
                 </motion.div>
 
-                {/* Top Right */}
+                {/* Right Desc */}
                 <motion.div
-                    className="sm:col-start-3 sm:row-start-1 self-start justify-self-end text-right max-w-lg"
+                    className="max-w-xl text-center sm:text-right sm:col-start-3 sm:row-start-1"
                     initial={{ opacity: 0, x: 40 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.6, delay: 0.2 }}
                 >
-                    <p className="text-gray-700 text-xl sm:text-2xl">
+                    <p className="text-gray-700 text-lg sm:text-2xl">
                         I craft engaging digital experiences through clean code,
                         thoughtful design, and creative visuals.
                     </p>
                 </motion.div>
 
-                {/* Center (Logo / Picture) */}
+                {/* Center */}
                 <motion.div
-                    className="row-span-1 sm:col-start-2 sm:row-start-2"
+                    className="flex flex-col items-center justify-center row-span-1 sm:col-start-2 sm:row-start-2 col-start-1 row-start-2"
                     initial={{ opacity: 0, scale: 0.8 }}
                     animate={{ opacity: 1, scale: 1 }}
                     whileHover={{ rotate: 360 }}
@@ -98,28 +115,27 @@ export default function HomeWithSocial() {
                     <img
                         src="https://i.pinimg.com/736x/f6/26/47/f62647f23f4eb78d1b9d267c92ee1521.jpg"
                         alt="Logo"
-                        className="w-40 h-40 sm:w-60 sm:h-60 rounded-full shadow-xl shadow-[#212631]/30 object-cover"
+                        className="w-38 h-38 sm:w-60 sm:h-60 rounded-full shadow-xl shadow-[#212631]/30 object-cover"
                     />
                 </motion.div>
 
                 {/* Bottom Left */}
                 <motion.div
-                    className="sm:col-start-1 sm:row-start-3 self-end justify-self-start text-left max-w-xs"
+                    className="sm:col-start-1 sm:row-start-3 self-center sm:self-end justify-self-center sm:justify-self-start text-center max-w-xs flex flex-col items-center"
                     initial={{ opacity: 0, x: -40 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.6, delay: 0.4 }}
                 >
-                    <h3 className="font-semibold text-2xl">Specialties</h3>
-                    <ul className="text-lg text-gray-600 list-disc ml-4">
+                    <h3 className="font-semibold text-xl sm:text-2xl mb-2">Specialties</h3>
+                    <ul className="text-left sm:text-lg text-gray-600 list-disc ml-4 space-y-1">
                         <li>Frontend Developer</li>
                         <li>UI/UX Designer</li>
                         <li>Graphic Designer</li>
                     </ul>
                 </motion.div>
-
-                {/* Bottom Right (Buttons as Icons - Horizontal) */}
+                                
                 <motion.div
-                    className="sm:col-start-3 sm:row-start-3 self-end justify-self-end flex flex-row gap-4"
+                    className="flex justify-center gap-6 sm:mt-36 sm:col-start-3 sm:row-start-3 sm:justify-self-end"
                     initial={{ opacity: 0, x: 40 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.6, delay: 0.6 }}
@@ -127,7 +143,7 @@ export default function HomeWithSocial() {
                     {/* Projects */}
                     <a
                         href="#projects"
-                        className="p-3 border-2 border-[#212631] rounded-full hover:bg-yellow-400 transition flex items-center justify-center"
+                        className="p-3 border-2 border-[#212631] bg-yellow-300 hover:bg-yellow-400 transition flex items-center justify-center"
                         aria-label="View Projects"
                     >
                         <img
@@ -140,7 +156,7 @@ export default function HomeWithSocial() {
                     {/* Contact */}
                     <a
                         href="#contact"
-                        className="p-3 border-2 border-[#212631] rounded-full hover:bg-blue-400 transition flex items-center justify-center"
+                        className="p-3 border-2 border-[#212631] bg-blue-300 hover:bg-blue-400 transition flex items-center justify-center"
                         aria-label="Contact Me"
                     >
                         <img
@@ -153,7 +169,7 @@ export default function HomeWithSocial() {
                     {/* Social */}
                     <button
                         onClick={() => setSocialOpen(true)}
-                        className="p-3 border-2 border-[#212631] rounded-full hover:bg-red-400 transition flex items-center justify-center"
+                        className="p-3 border-2 border-[#212631] bg-red-300 hover:bg-red-400 transition flex items-center justify-center"
                         aria-label="Social Links"
                     >
                         <img
@@ -163,7 +179,6 @@ export default function HomeWithSocial() {
                         />
                     </button>
                 </motion.div>
-
             </div>
 
             {/* Social Popup */}
@@ -178,8 +193,8 @@ export default function HomeWithSocial() {
                     />
                     <motion.div
                         className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 
-                                   w-80 sm:w-96 bg-[#212631]/90 backdrop-blur-md text-white 
-                                   rounded-2xl shadow-2xl p-6 z-50"
+                       w-72 sm:w-96 bg-[#212631]/90 backdrop-blur-md text-white 
+                       rounded-2xl shadow-2xl p-6 z-50"
                         initial={{ opacity: 0, y: 50, scale: 0.9 }}
                         animate={{ opacity: 1, y: 0, scale: 1 }}
                         transition={{ duration: 0.5, ease: "easeOut" }}

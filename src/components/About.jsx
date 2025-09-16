@@ -37,7 +37,7 @@ export default function About() {
                 custom={0}
                 className="max-w-7xl mx-auto space-y-12 sm:space-y-16 md:space-y-20 lg:space-y-24 relative z-10"
             >
-                {/* TOP: Title + Image + Intro */}
+                {/* Title Intro */}
                 <div className="grid grid-cols-1 md:grid-cols-[280px_1fr] lg:grid-cols-[320px_1fr] gap-8 md:gap-12 items-start">
                     <motion.div
                         className="space-y-4 sm:space-y-6 flex flex-col items-left md:items-start text-left md:text-left"
@@ -92,8 +92,9 @@ export default function About() {
                     </motion.div>
                 </div>
 
-                {/* MIDDLE: College | Interests | Quote */}
+                {/* Middle Info */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 md:gap-10 lg:gap-12 text-sm sm:text-base md:text-lg leading-relaxed">
+                    {/* Banner Image */}
                     <motion.div
                         className="col-span-1 md:col-span-3 flex flex-col items-center justify-center"
                         variants={smoothFadeIn}
@@ -106,6 +107,7 @@ export default function About() {
                         />
                     </motion.div>
 
+                    {/* College Info */}
                     <motion.div
                         className="border border-[#ebebeb]/20 p-5 sm:p-6 md:p-8 space-y-4 rounded-xl"
                         variants={smoothFadeIn}
@@ -125,6 +127,7 @@ export default function About() {
                         </ul>
                     </motion.div>
 
+                    {/* Personal Interests */}
                     <motion.div
                         className="border border-[#ebebeb]/20 p-5 sm:p-6 md:p-8 space-y-4 rounded-xl"
                         variants={smoothFadeIn}
@@ -142,6 +145,7 @@ export default function About() {
                         </ul>
                     </motion.div>
 
+                    {/* Inspiring Quote */}
                     <motion.div
                         className="border border-[#ebebeb]/20 p-5 sm:p-6 md:p-8 space-y-4 text-white rounded-xl"
                         variants={smoothFadeIn}
@@ -160,7 +164,7 @@ export default function About() {
                     </motion.div>
                 </div>
 
-                {/* BOTTOM: Skills */}
+                {/* Skills List */}
                 <div className="space-y-8 sm:space-y-10">
                     <div className="flex flex-col items-start">
                         <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-widest">

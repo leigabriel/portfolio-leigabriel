@@ -3,13 +3,13 @@ export default function Contact() {
         <>
             {/* Contact Section */}
             <section id="contact" className="min-h-screen flex flex-col md:flex-row">
-                {/* Left: Info */}
+                {/* Info Panel */}
                 <div
                     data-aos="fade-right"
                     className="w-full md:w-1/2 bg-gray-900 text-white flex flex-col items-center justify-center p-10"
                 >
                     <div className="max-w-md text-center md:text-left space-y-6">
-                        {/* Logo */}
+                        {/* Logo Image */}
                         <div data-aos="zoom-in" className="flex justify-center md:justify-start">
                             <img
                                 src="/img/lei_img.jpg"
@@ -33,7 +33,7 @@ export default function Contact() {
                     </div>
                 </div>
 
-                {/* Right: Contact Form */}
+                {/* Form Panel */}
                 <div
                     data-aos="fade-left"
                     className="w-full md:w-1/2 bg-blue-900 flex items-center justify-center p-8 sm:p-12"
@@ -54,7 +54,7 @@ export default function Contact() {
                             method="POST"
                             className="space-y-5"
                         >
-                            {/* Name */}
+                            {/* Name Field */}
                             <div data-aos="fade-up">
                                 <label className="block mb-1 text-sm font-medium text-gray-300">
                                     Full Name
@@ -69,7 +69,7 @@ export default function Contact() {
                                 />
                             </div>
 
-                            {/* Email */}
+                            {/* Email Field */}
                             <div data-aos="fade-up">
                                 <label className="block mb-1 text-sm font-medium text-gray-300">
                                     Email

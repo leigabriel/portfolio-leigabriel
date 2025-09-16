@@ -41,7 +41,7 @@ export default function Chatbot() {
                 />
             </button>
 
-            {/* Chatbot Box with Animation */}
+            {/* Chatbot Popup */}
             <AnimatePresence>
                 {open && (
                     <motion.div
@@ -58,7 +58,7 @@ export default function Chatbot() {
                             Hi there! Ask me something 😊
                         </h2>
 
-                        {/* Messages */}
+                        {/* Chat Messages */}
                         <div className="h-64 overflow-y-auto mb-2 space-y-2">
                             {messages.map((msg, i) => (
                                 <div
@@ -73,7 +73,7 @@ export default function Chatbot() {
                             ))}
                         </div>
 
-                        {/* Predefined Questions */}
+                        {/* Quick Questions */}
                         <div className="flex flex-col gap-2">
                             {Object.keys(predefinedAnswers).map((q, i) => (
                                 <button

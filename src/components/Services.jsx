@@ -31,7 +31,7 @@ export default function Services() {
                 className="min-h-screen py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-10 bg-white rounded-t-4xl flex items-center justify-center"
             >
                 <div className="max-w-7xl w-full mx-auto relative overflow-visible">
-                    {/* Section Header */}
+                    {/* Services Header */}
                     <div className="text-center md:text-left mb-10 sm:mb-12">
                         <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold tracking-widest text-[#212631] uppercase">
                             My Services
@@ -41,7 +41,7 @@ export default function Services() {
                         </p>
                     </div>
 
-                    {/* Services Wrapper */}
+                    {/* Cards Wrapper */}
                     <div className="gallery divide-y divide-gray-200">
                         {services.map((service, index) => (
                             <div
@@ -57,7 +57,7 @@ export default function Services() {
                                     </p>
                                 </div>
 
-                                {/* Desktop Hover Image */}
+                                {/* Desktop Image */}
                                 <img
                                     src={service.img}
                                     alt={service.title}

@@ -59,7 +59,7 @@ export default function Navbar() {
                 ))}
             </nav>
 
-            {/* Mobile Hamburger */}
+            {/* Mobile Menu */}
             <button
                 onClick={() => setMenuOpen(true)}
                 className="md:hidden fixed top-4 right-4 w-12 h-12 flex items-center justify-center bg-blue-400 text-black rounded-full shadow-[#212631] shadow-lg z-50 hover:scale-110 transition-transform duration-300"
@@ -67,11 +67,11 @@ export default function Navbar() {
                 <HiOutlineMenu size={28} />
             </button>
 
-            {/* Mobile Menu with Animation */}
+            {/* Sidebar Popup */}
             <AnimatePresence>
                 {menuOpen && (
                     <>
-                        {/* Dark Overlay */}
+                        {/* Overlay Backdrop */}
                         <motion.div
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
