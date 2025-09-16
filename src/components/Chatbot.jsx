@@ -45,10 +45,13 @@ export default function Chatbot() {
             <AnimatePresence>
                 {open && (
                     <motion.div
-                        initial={{ opacity: 0, y: 50, scale: 0.9 }}
-                        animate={{ opacity: 1, y: 0, scale: 1 }}
-                        exit={{ opacity: 0, y: 50, scale: 0.9 }}
-                        transition={{ duration: 0.4, ease: "easeOut" }}
+                        initial={{ opacity: 0, scale: 0.5, y: 100 }}
+                        animate={{ opacity: 1, scale: 1, y: 0 }}
+                        exit={{ opacity: 0, scale: 0.5, y: 100 }}
+                        transition={{
+                            duration: 0.25,
+                            ease: [0.22, 1, 0.36, 1] // springy pop animation
+                        }}
                         className="fixed bottom-24 right-8 w-80 bg-white/70 backdrop-blur-lg shadow-2xl shadow-[#212631] rounded-xl p-4 flex flex-col z-[9999]"
                     >
                         <h2 className="text-lg font-bold mb-2 text-gray-700">

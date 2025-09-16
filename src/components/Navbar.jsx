@@ -20,7 +20,7 @@ export default function Navbar() {
     const getScale = (i) => {
         if (hoverIndex === null) return 1;
         const distance = Math.abs(hoverIndex - i);
-        if (distance === 0) return 1.6;
+        if (distance === 0) return 1.4;
         if (distance === 1) return 1;
         if (distance === 2) return 1;
         return 1;
