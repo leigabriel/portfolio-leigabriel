@@ -9,11 +9,11 @@ module.exports = {
       keyframes: {
         marquee: {
           "0%": { transform: "translateX(0)" },
-          "100%": { transform: "translateX(-50%)" }, // move half width (since we duplicated text)
+          "100%": { transform: "translateX(-50%)" },
         },
       },
       animation: {
-        marquee: "marquee 15s linear infinite", // adjust duration for speed
+        marquee: "marquee 15s linear infinite",
       },
     }
   },
